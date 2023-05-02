@@ -33,8 +33,8 @@
 #define DIO_u8_INPUT_FLOATIN              0
 #define DIO_u8_INPUT_PULLUP               1
 
-#define Conc(b7,b6,b5,b4,b3,b2,b1,b0)       Conc_Help(b7,b6,b5,b4,b3,b2,b1,b0)
-#define Conc_Help(b7,b6,b5,b4,b3,b2,b1,b0)    0b##b7##b6##b5##b4##b3##b2##b1b0
+#define Conc(b7,b6,b5,b4,b3,b2,b1,b0)           Conc_Help(b7,b6,b5,b4,b3,b2,b1,b0)
+#define Conc_Help(b7,b6,b5,b4,b3,b2,b1,b0)      0b##b7##b6##b5##b4##b3##b2##b1b0
 
 
 #endif
