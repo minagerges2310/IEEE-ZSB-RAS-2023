@@ -144,7 +144,7 @@ LOAD e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x2442
+.text           0x00000000     0x2446
  *(.vectors)
  .vectors       0x00000000       0x54 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -288,19 +288,19 @@ LOAD e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text.LCD_u8GoToXY
                 0x00001fa8       0x6c ./LCD_program.o
                 0x00001fa8                LCD_u8GoToXY
- .text.main     0x00002014      0x3bc ./main.o
+ .text.main     0x00002014      0x3c0 ./main.o
                 0x00002014                main
- .text.libgcc   0x000023d0        0x0 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x000023d0       0x38 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x000023d0                __prologue_saves__
- .text.libgcc   0x00002408       0x36 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00002408                __epilogue_restores__
- .text.libgcc   0x0000243e        0x0 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                0x0000243e                . = ALIGN (0x2)
+ .text.libgcc   0x000023d4        0x0 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000023d4       0x38 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x000023d4                __prologue_saves__
+ .text.libgcc   0x0000240c       0x36 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x0000240c                __epilogue_restores__
+ .text.libgcc   0x00002442        0x0 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00002442                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000243e        0x0 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x0000243e                exit
-                0x0000243e                _exit
+ .fini9         0x00002442        0x0 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00002442                exit
+                0x00002442                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -319,11 +319,11 @@ LOAD e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000243e        0x4 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00002442        0x4 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00002442                _etext = .
+                0x00002446                _etext = .
 
-.data           0x00800060        0x8 load address 0x00002442
+.data           0x00800060        0x8 load address 0x00002446
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -381,8 +381,8 @@ LOAD e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.bss*)
  *(COMMON)
                 0x00800068                PROVIDE (__bss_end, .)
-                0x00002442                __data_load_start = LOADADDR (.data)
-                0x0000244a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00002446                __data_load_start = LOADADDR (.data)
+                0x0000244e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800068        0x0
                 0x00800068                PROVIDE (__noinit_start, .)
@@ -407,13 +407,13 @@ LOAD e:/imt/tools/imt_sdk_win_32/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x192c
+.stab           0x00000000     0x1938
  *(.stab)
  .stab          0x00000000      0x8d0 ./DIO_program.o
  .stab          0x000008d0      0xb4c ./LCD_program.o
                                 0xbc4 (size before relaxing)
- .stab          0x0000141c      0x510 ./main.o
-                                0x714 (size before relaxing)
+ .stab          0x0000141c      0x51c ./main.o
+                                0x720 (size before relaxing)
 
 .stabstr        0x00000000      0xa14
  *(.stabstr)

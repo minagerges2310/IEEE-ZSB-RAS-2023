@@ -70,7 +70,9 @@ int main()
 		}
 		else if (count == 34){
 			LCD_voidClr();
+			count=0;
 			LCD_u8GoToXY(LCD_u8_LINE1,0);
+
 		}
 
 
