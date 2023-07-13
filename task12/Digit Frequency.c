@@ -4,24 +4,19 @@
 #include <stdlib.h>
 
 int main() {
-
-    
-    char *str;
-    str = malloc(1024 * sizeof(char));
-    scanf("%s", str);
-    str = realloc(str, strlen(str) + 1);
-    int len = strlen(str), i;
-    int arr[10];
-    for(i = 0; i < 10; i++)
-        arr[i] = 0;
-    for(i = 0; i < len; i++) {
-        if(str[i] >= '0' && str[i] <= '9') {
-            arr[(int)(str[i] - '0')]++;
+  
+    char str[100000];
+     fgets(str, sizeof(str),stdin);
+    int num[10] ={0};
+    int len = strlen(str);
+    for(int i =0; i<len; i++){    
+        if((int)str[i] >= '0' && (int)str[i] <='9'){
+            num[(int) str[i] - '0'] +=1;
         }
+    }  
+    for(int i = 0; i < 10; i++){
+        printf("%d ", num[i]);}
+    
+    return 0;
     }
-    for(i = 0; i < 10; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
-    free(str);
-    return 0;}
     
