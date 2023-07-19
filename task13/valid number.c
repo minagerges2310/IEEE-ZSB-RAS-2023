@@ -44,6 +44,13 @@ bool isNumber(char *s)
         s++; 
     }
     }
-}
+
 
     return num; 
+}
+
+int main()
+{
+    printf("%d", isNumber("+6e-1"));
+    return 0;
+}
