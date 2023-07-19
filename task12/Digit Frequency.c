@@ -18,5 +18,6 @@ int main() {
         printf("%d ", num[i]);}
     
     return 0;
+    
     }
     
