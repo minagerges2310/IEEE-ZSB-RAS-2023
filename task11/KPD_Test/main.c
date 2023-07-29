@@ -17,7 +17,7 @@ int main(void)
 	DIO_voidInit();
 	LCD_voideInit();
 	LCD_PrintString("enter password");
-	u8 password[4] = {'1','2','3','4'};
+	u8 password[4] = {'1','2','3','3'};
 	u8 index = 0;
 
 	while(1)
