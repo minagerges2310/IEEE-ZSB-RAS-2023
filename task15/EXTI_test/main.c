@@ -19,7 +19,7 @@ int main (void)
 	GI_voidEnable();
 	EXTI_EXTIEnable(EXTI_u8_INT2,EXTI_u8_RAISING_EDGE);
 	SET_BIT(SREG,7);
-	EXTI_u8EXTISetCallBack(&login,EXTI_u8_INT2);
+	EXTI_u8EXTISetCallBack(EXTI_u8_INT2,&login);
 
 	while(1);
 	return 0;
