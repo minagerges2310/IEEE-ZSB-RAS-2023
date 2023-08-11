@@ -13,7 +13,7 @@ int main(void)
 	LCD_voideInit();
 	DIO_voidInit();
 	GI_voidEnable();
-	DIO_voidSetPinDirection(DIO_u8_PORTB,DIO_u8_PIN1,DIO_u8_OUTPUT);
+	DIO_voidSetPinDirection(DIO_u8_PORTA,DIO_u8_PIN1,DIO_u8_OUTPUT);
 	DIO_voidSetPinValue(DIO_u8_PORTB,DIO_u8_PIN0,DIO_u8PortHigh);
 	TIMERS_u8Timer0CTCSetCallBack(&App_voidTogLed);
 	TIMERS_voidTimer0Init();
@@ -31,12 +31,12 @@ void App_voidTogLed(void)
 
 	if (flag==0)
 	{
-		DIO_voidSetPinValue(DIO_u8_PORTB,DIO_u8_PIN1,DIO_u8PortHigh);
+		DIO_voidSetPinValue(DIO_u8_PORTA,DIO_u8_PIN1,DIO_u8PortHigh);
 		flag=1;
 	}
 	else
 	{
-		DIO_voidSetPinValue(DIO_u8_PORTB,DIO_u8_PIN1,DIO_u8PortLow);
+		DIO_voidSetPinValue(DIO_u8_PORTA,DIO_u8_PIN1,DIO_u8PortLow);
 		flag=0;
 	}
 }
